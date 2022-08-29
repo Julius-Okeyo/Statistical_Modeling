@@ -18,7 +18,6 @@ P_N - Probability that a person contacts covid-19 from interacting
 
 '''
 from plumbum import cli
-from plumbum import cmd
 
 class IR_Projection(cli.Application):
     global Total_Population
@@ -66,7 +65,6 @@ class IR_Projection(cli.Application):
 
     def main(self):
         self.Time_Series_Projection(int(input('Projection period in days: ')))
-        cmd.ls(__path__)
 
 if __name__ == '__main__':
     IR_Projection.run()
